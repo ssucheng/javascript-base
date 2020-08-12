@@ -8,5 +8,7 @@ let obj = {
 }
 // let {p:[x,y]} = obj
 // console.log(x,y)
-let {p:res} = obj
-console.log(res)
+// let {p:res} = obj
+// console.log(res)
+// let {p,p:[x,{y}]} = obj
+// console.log(p,x,y)
