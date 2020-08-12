@@ -59,3 +59,4 @@
 //     console.log(name,age)
 // }
 // f({name:'yangruhu',age:19})
+// 9遍历map解构
