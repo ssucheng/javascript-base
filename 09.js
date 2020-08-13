@@ -1,9 +1,9 @@
-var obj = {
-    name:1,
-    name1:{
-        age:13
-    }
-};
+// var obj = {
+//     name:1,
+//     name1:{
+//         age:13
+//     }
+// };
 // 简书深拷贝链接：https://www.jianshu.com/p/1b212581a8d5
 
 // Object.assign()有二级属性是引用数据类型无法深拷贝
