@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var Zepto = (function () {
+            var zepto = {},
+                $
+
+            function Z(doms) {
+                var len = doms.length
+                for (var i = 0; i < len; i++) {
+                    this[i] = doms[i]
+                }
+                this.length = doms.length
+            }
+
+            zepto.fragment = function (html, name, properties) {
+                // 根据 html 字符串生成 dom
+            }
+
+            zepto.isZ = function (object) {
+                return object instanceof zepto.Z
+            }
+            zepto.Z = function (doms) {
+                return new Z(doms)
+            }
+
+            zepto.init = function (selector, context) {
+                var dom
+                // 根据 selector 生成 dom
+                // ···
+                return zepto.Z(dom, selector)
+            }
+
+            $ = function (selector, context) {
+                return zepto.init(selector, context)
+            }
+
+            zepto.qsa = function (element, selector) {
+                // 根据 选择器字符串生成 dom
+            }
+
+            $.type = type
+            //   ······
+            // 把各种工具方法绑定到 $ 上
+
+            $.fn = {
+                constructor: zepto.Z,
+                forEach: emptyArray.forEach
+                // 把各种实例方法绑定到 $.fn 上
+            }
+
+            zepto.Z.prototype = Z.prototype = $.fn
+
+            $.zepto = zepto
+
+            return $
+        })()
+        window.Zepto = Zepto
+        window.$ === undefined && (window.$ = Zepto)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            function Fan(x,y){
+                // 构造函数首字母要大写
+                this.x = x;
+                this.y = y;
+                this.sum = function(){
+                    console.log(this.x + this.y)
+                }
+            }
+            // 实例化对象的创建
+            var a  = new Fan(1,2);
+            a.sum() //3
+            
+
+    </script>
+    
+</body>
+</html>
