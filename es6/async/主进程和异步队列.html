@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            setTimeout(() => {
+                console.log(1) 
+            }, 100);
+            setTimeout(() => {
+                console.log(2)
+            });
+            console.log(3)
+            // var sum = 0
+            // for(var i = 0 ;i < 100000;i++){
+            //     sum++
+            // }
+            // console.log(sum)
+            // 输出结果是 3 2 1
+            // 主队列 和异步队列 
+            // 先执行主队列的内容 主队列执行完毕之后执行异步队列的内容
+            // 主队列：console.log(3)     |异步队列：function(){console.log(2)}
+            //   |                       |                                     
+            //   |                       |
+            //   |                       |
+                                    //   |
+                                    //   |function(){console.log(1)}
+                                    //  100毫秒在加入所以加载console.log(2)后边                        
+            // 原因是  settimeout 是异步函数 放在异步队列中 
+    </script>
+</body>
+</html>
