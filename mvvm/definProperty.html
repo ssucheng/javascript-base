@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 模仿vue实例如何监听 数据变化做出响应
+        var vm = {};
+        var data = {
+            name:'zhan',
+            age:1
+        }
+        var key ,value
+        for(key in data){
+            (function(key){
+                Object.defineProperty(vm,key,{
+                    get:function(){
+                        console.log('get',data[key])
+                        return data[key]
+                        
+                    },
+                    set:function(newVal){
+                        data[key] = newVal
+                        console.log('set',data[key])
+                    }
+                })
+            })(key)
+        }
+
+    </script>
+</body>
+</html>
