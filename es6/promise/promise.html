@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var src = 'https://www.baidu.com/img/flexible/logo/pc/result@2.png'
+        var src1 = 'https://www.baidu.com/img/flexible/logo/pc/result@2.png111'//错误的地址
+        function loadImg(src) {
+            return new Promise((resolve,reject) => {
+                // 创建img标签
+                var img = document.createElement('img');
+                // throw new Error()
+                img.onload = function () {
+                    resolve(img)
+                };
+                img.onerror = function (){
+                    reject('图片加载失败')
+                }
+                // 因为onload是异步函数所以 img.src 先执行
+                img.src = src;
+
+            })
+        }
+       
+        // try{
+        //     loadImg(src1).then((res) => {
+        //     console.log(res.height)
+        // })
+        // }catch(err){
+        //     console.log(err)
+        // }
+    </script>
+</body>
+</html>
